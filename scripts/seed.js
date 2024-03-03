@@ -177,12 +177,20 @@ async function seedRevenue(client) {
 }
 
 async function main() {
-  // const client = await db.connect();
+  const clientVersel = await db.connect();
+  await clientVersel.connect();
+
+  await seedUsers(clientVersel);
+  await seedCustomers(clientVersel);
+  await seedInvoices(clientVersel);
+  await seedRevenue(clientVersel);
+
+  await clientVersel.end();
 
   const client = new Client({
-    user: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASSWORD,
-    database: process.env.POSTGRES_DATABASE,
+    user: process.env.POSTGRES_USER_LOCAL,
+    password: process.env.POSTGRES_PASSWORD_LOCAL,
+    database: process.env.POSTGRES_DATABASE_LOCAL,
   });
 
   // console.log(client);

@@ -180,10 +180,20 @@ async function main() {
   // const client = await db.connect();
 
   const client = new Client({
-    user: 'shtekata',
-    password: '7u87u8',
-    database: 'nextjs-dashboard',
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DATABASE,
   });
+
+  // console.log(client);
+  // const client1 = {
+  //   user: process.env.POSTGRES_USER,
+  //   password: process.env.POSTGRES_PASSWORD,
+  //   database: process.env.POSTGRES_DATABASE,
+  // };
+  // console.log(client1);
+  // console.log(process.env);
+
   await client.connect();
 
   await seedUsers(client);

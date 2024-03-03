@@ -193,7 +193,6 @@ async function main() {
   // };
   // console.log(client1);
   // console.log(process.env);
-  //test11
 
   await client.connect();
 

@@ -177,15 +177,7 @@ async function seedRevenue(client) {
 }
 
 async function main() {
-  const clientVersel = await db.connect();
-  await clientVersel.connect();
-
-  await seedUsers(clientVersel);
-  await seedCustomers(clientVersel);
-  await seedInvoices(clientVersel);
-  await seedRevenue(clientVersel);
-
-  await clientVersel.end();
+  // const client = await db.connect();
 
   const client = new Client({
     user: process.env.POSTGRES_USER_LOCAL,

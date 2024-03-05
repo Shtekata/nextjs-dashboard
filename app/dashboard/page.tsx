@@ -5,7 +5,8 @@ import { lusitana } from '@/app/ui/fonts'
 import{fetchRevenue}from'@/app/lib/data'
 
 export default async function Page() {
-    const revenue=await fetchRevenue()
+    const revenue = await fetchRevenue()
+    debugger;
     return (
         <main>
             <h1 className={`${lusitana.className}mb-4 text-xl md:text-2xl`}>

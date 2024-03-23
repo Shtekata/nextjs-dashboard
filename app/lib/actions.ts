@@ -1,7 +1,7 @@
 'use server'
 
 import { z } from 'zod'
-import { sql } from '@vercel/postgres'
+import { sql } from '@/app/lib/sql-postgres-data'
 
 const FormSchema = z.object({
   id: z.string(),

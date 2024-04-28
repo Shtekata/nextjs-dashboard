@@ -42,9 +42,7 @@ export default function Page() {
             >
               Ala_Bala
             </p>
-            <p
-              className={`${noto.className} m-auto font-black text-blue-800 text-3xl`}
-            ></p>
+            <p className={`${noto.className} m-auto text-3xl`}>☠</p>
           </div>
           <div className='flex justify-center'>
             <span className={iconsArr} />

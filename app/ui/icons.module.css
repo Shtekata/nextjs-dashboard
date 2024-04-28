@@ -1,0 +1,11 @@
+.hamburger::before {
+  content: '\01F354';
+}
+
+.smile::after {
+  content: '\01F60A';
+}
+
+.clock::before {
+  content: '\01F55B';
+}

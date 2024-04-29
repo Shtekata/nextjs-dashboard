@@ -3,7 +3,7 @@ import React from 'react'
 interface EmojiInt {
   className?: string
   label?: string
-  symbol: string
+  symbol?: string
 }
 
 const Emoji = (x: EmojiInt) => (

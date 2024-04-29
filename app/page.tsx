@@ -14,7 +14,6 @@ import Emoji from '@/app/ui/emoji'
 
 export default function Page() {
   const iconsArr = `${icons.clock} ${icons.smile}`
-  const smile = { __html: String.fromCodePoint(0x1f60a) }
   const timeRot = { ['--time' as string]: '5s' }
   return (
     <main className='flex min-h-screen flex-col p-6'>
@@ -49,10 +48,14 @@ export default function Page() {
               symbol='☠'
             />
           </div>
-          <div className='flex justify-center'>
-            <span className={iconsArr} />
-            <span className={icons.hamburger} />
-            <span dangerouslySetInnerHTML={smile} />
+          <div className='flex justify-center gap-5'>
+            <Emoji
+              label='clock&smile'
+              className={`${iconsArr} ${noto.className} text-5xl`}
+            />
+            <Emoji label='clock' className={icons.clock} />
+            <Emoji label='hamburger' className={icons.hamburger} />
+            <Emoji label='smile' className={icons.smile} />
             <Emoji label='hamburger' symbol={String.fromCodePoint(0x1f354)} />
             <Emoji label='100%' symbol={String.fromCodePoint(0x1f4af)} />
             <Emoji label='halloween' symbol={String.fromCodePoint(0x1f383)} />

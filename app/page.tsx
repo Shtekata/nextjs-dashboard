@@ -10,6 +10,7 @@ import knuckles from '@/public/knuckles.gif'
 import sponge_bob from '@/public/sponge_bob.gif'
 import rice_bowl from '@/public/rice_bowl.png'
 import loading from '@/public/loading.svg'
+import Emoji from '@/app/ui/emoji'
 
 export default function Page() {
   const iconsArr = `${icons.clock} ${icons.smile}`
@@ -42,15 +43,19 @@ export default function Page() {
             >
               Ala_Bala
             </p>
-            <p className={`${noto.className} m-auto text-3xl`}>☠</p>
+            <Emoji
+              className={`${noto.className} m-auto text-3xl`}
+              label='skull'
+              symbol='☠'
+            />
           </div>
           <div className='flex justify-center'>
             <span className={iconsArr} />
             <span className={icons.hamburger} />
             <span dangerouslySetInnerHTML={smile} />
-            <>{String.fromCodePoint(0x1f354)}</>
-            <>{String.fromCodePoint(0x1f4af)}</>
-            <>{String.fromCodePoint(0x1f383)}</>
+            <Emoji label='hamburger' symbol={String.fromCodePoint(0x1f354)} />
+            <Emoji label='100%' symbol={String.fromCodePoint(0x1f4af)} />
+            <Emoji label='halloween' symbol={String.fromCodePoint(0x1f383)} />
           </div>
           <div className='flex justify-between'>
             <Image src={knuckles} alt='knuckles' width={25} />

@@ -4,7 +4,8 @@ import {
   Roboto_Mono,
   Roboto,
   Jacques_Francois_Shadow,
-  Noto_Color_Emoji
+  Noto_Color_Emoji,
+  Noto_Emoji
 } from 'next/font/google'
 export const inter = Inter({ subsets: ['latin'] })
 export const lusitana = Lusitana({ weight: ['400', '700'], subsets: ['latin'] })
@@ -21,8 +22,14 @@ export const jacques = Jacques_Francois_Shadow({
   subsets: ['latin'],
   display: 'swap'
 })
-export const noto = Noto_Color_Emoji({
+export const notoColor = Noto_Color_Emoji({
   weight: ['400'],
+  style: ['normal'],
+  subsets: ['emoji'],
+  display: 'swap'
+})
+export const noto = Noto_Emoji({
+  weight: ['300', '400', '500', '600', '700'],
   style: ['normal'],
   subsets: ['emoji'],
   display: 'swap'

@@ -2,7 +2,14 @@ import AcmeLogo from '@/app/ui/acme-logo'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import styles from '@/app/ui/home.module.css'
-import { lusitana, roboto_mono, roboto, jacques, noto } from '@/app/ui/fonts'
+import {
+  lusitana,
+  roboto_mono,
+  roboto,
+  jacques,
+  notoColor,
+  noto
+} from '@/app/ui/fonts'
 import Image from 'next/image'
 import icons from '@/app/ui/icons.module.css'
 import utils from '@/app/ui/utils.module.css'
@@ -43,7 +50,7 @@ export default function Page() {
               Ala_Bala
             </p>
             <Emoji
-              className={`${noto.className} m-auto text-3xl`}
+              className={`${notoColor.className} m-auto text-3xl`}
               label='skull'
               symbol='☠'
             />

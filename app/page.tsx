@@ -58,7 +58,7 @@ export default function Page() {
           <div className='flex justify-center gap-5'>
             <Emoji
               label='clock&smile'
-              className={`${iconsArr} ${noto.className} text-5xl`}
+              className={`${iconsArr} ${noto.className} text-3xl`}
             />
             <Emoji label='clock' className={icons.clock} />
             <Emoji label='hamburger' className={icons.hamburger} />
@@ -68,7 +68,12 @@ export default function Page() {
             <Emoji label='halloween' symbol={String.fromCodePoint(0x1f383)} />
           </div>
           <div className='flex justify-between'>
-            <Image src={knuckles} alt='knuckles' width={25} />
+            <Image
+              src={knuckles}
+              alt='knuckles'
+              width={25}
+              unoptimized={true}
+            />
             <Image
               className={utils.rotate}
               style={timeRot}
@@ -76,7 +81,12 @@ export default function Page() {
               alt='rice_bowl'
               width={25}
             />
-            <Image src={sponge_bob} alt='sponge_bob' width={25} />
+            <Image
+              src={sponge_bob}
+              alt='sponge_bob'
+              width={25}
+              unoptimized={true}
+            />
           </div>
           <button
             type='button'

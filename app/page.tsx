@@ -44,9 +44,7 @@ export default function Page() {
             >
               Ala_Bala
             </p>
-            <p
-              className={`${jacques.className} m-auto font-black text-blue-800 text-3xl`}
-            >
+            <p className={`${jacques.className} m-auto text-blue-800 text-3xl`}>
               Ala_Bala
             </p>
             <Emoji

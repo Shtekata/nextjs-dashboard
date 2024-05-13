@@ -7,8 +7,8 @@ const PROD = process.env.METADATABASEURLPROD
 const url = String(DEV ? DEV : PROD)
 
 export const metadata: Metadata = {
-  title: { template: '%s | Asen Dashboard', default: 'Asen Dashboard' },
-  description: 'The official Next.js Course Dashboard, build with App Router.',
+  title: { template: '%s | Walk Inside', default: 'Walk Inside' },
+  description: 'A site with many interesting and secret things! :)',
   metadataBase: new URL(url),
   alternates: {
     canonical: '/',
